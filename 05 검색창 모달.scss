@@ -1,0 +1,171 @@
+/* montserrat raleway roboto 폰트*/
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Hind+Siliguri:wght@300;400;500;600;700&family=Hind:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* Noto Sans KR 폰트 */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* 모든폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Hind+Siliguri:wght@300;400;500;600;700&family=Hind:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Monoton&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* XEION CDN */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+/* Bootstrap Icons */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+/* Lato 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Playfair 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* Open Sans 폰트*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* 눈누 폰트 지마켓 */
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Raleway' , sans-serif;
+}
+
+body{
+    margin: 0;
+    // line-height: 1.6em;
+    height: 100vh;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+/* Search Form Modal with Flexbox */
+.container{
+
+    header{
+        // border: 1px solid red;
+        height: 80px;
+        background-color: #708090;
+        display: flex;
+        justify-content: center;
+        nav{
+            // border: 1px solid red;
+            width: 1250px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .logo{
+
+                img{
+                    height: 50px;
+                }
+            }
+            .search{
+                color: #fff;
+                cursor: pointer;
+                font-size: 30px;
+            }
+        }
+    }
+    section{
+        // border: 1px solid #000;
+        background-color: #fff;
+        font-size: 3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 80px);
+        h1{
+            
+        }
+    }
+}
+
+.modal-search{
+    position: fixed;
+    width: 100%;
+    height: 300px;
+    background-color: #333;
+    top: -300px; left: 0;
+    transition: 0.35s;
+    &.active{
+        top: 0;
+    }
+    .close-search{
+        position: absolute;
+        font-size: 30px;
+        color: #fff;
+        right: 15px;
+        top: 15px;
+        cursor: pointer;
+        &:hover{
+            color: #ffffffc4;
+        }
+    }
+    .search{
+        // border: 1px solid blue;
+        width: 550px;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        .field{
+            display: flex;
+            // border: 1px solid crimson;
+            input{
+                padding: 15px;
+            }
+            input[type=search]{
+                flex: 4;
+                padding-left: 40px;
+                &:focus::placeholder{
+                    opacity: 0;
+                }
+                &::placeholder{
+                    transition: 0.35s;
+                }
+            }
+            input[type=button]{
+                flex: 1;
+                background-color: crimson;
+                color: #fff;
+                outline: none;
+                border: none;
+                cursor: pointer;
+                transition: 0.35s;
+                // padding-right: 30px;
+                &:hover{
+                    background-color: rgba(220, 20, 60, 0.788);
+                }
+            }
+            &::after{
+                content: '\e97a';
+                color: #000;
+                position: absolute;
+                font-size: 25px;
+                font-family: xeicon;
+                left: 10px;
+                top: 13px;
+            }
+        }
+        .hash-tag{
+            color: gold;
+            display: none;
+            transition: 0.35s;
+        }
+    }
+}
